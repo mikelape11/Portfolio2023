@@ -1,0 +1,92 @@
+/*
+ * Fonts
+ */
+
+// Font
+.font(@family, @weight, @size) {
+	font-family: @family;
+	font-weight: @weight;
+	font-size: @size;
+}
+
+// Font Family
+.font-family(@family, @weight) {
+	font-family: @family;
+	font-weight: @weight;
+	font-style: normal;
+}
+
+// Font Size
+.font-size(@rem) {
+	font-size: ~"@{rem}rem";
+}
+
+// Font Size Pixels
+.font-size-pixel(@rem) {
+	@pixels: (@rem * 10);
+	font-size: ~"@{pixels}px";
+	font-size: ~"@{rem}rem";
+}
+
+.font-face(@family: arial, @family-file: arial, @weight: normal, @style: normal) {
+    @font-face {
+        font-family: '@{family}';
+        src:url('@{font-path}/@{family}/@{family-file}.eot');
+        src:url('@{font-path}/@{family}/@{family-file}.eot?#iefix') format('embedded-opentype'),
+        url('@{font-path}/@{family}/@{family-file}.svg#icon') format('svg'),
+        // url('@{font-path}/@{family}/@{family-file}.woff') format('woff'),
+        url('@{font-path}/@{family}/@{family-file}.ttf') format('truetype'),
+        url('@{font-path}/@{family}/@{family-file}.svg#icon') format('svg');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+
+.font-face('montserrat', 'Montserrat-Light', 300, normal);
+.font-face('montserrat', 'Montserrat-Regular', 400, normal);
+.font-face('montserrat', 'Montserrat-Medium', 500, normal);
+.font-face('montserrat', 'Montserrat-SemiBold', 600, normal);
+.font-face('montserrat', 'Montserrat-Bold', bold, normal);
+
+.font-face('jakarta', 'PlusJakartaSans-Light', 300, normal);
+.font-face('jakarta', 'PlusJakartaSans-Regular', 400, normal);
+.font-face('jakarta', 'PlusJakartaSans-Medium', 500, normal);
+.font-face('jakarta', 'PlusJakartaSans-SemiBold', 600, normal);
+.font-face('jakarta', 'PlusJakartaSans-Bold', bold, normal);
+
+.font-face(@icoFont, @icoFont, normal, normal);
+
+// Fonts
+@font-path: '/assets/fonts';
+@icoFont: 'portfolio';
+@sans-serif-font-family: "montserrat", Helvetica, Arial, sans-serif;
+@serif-font-family: "jakarta";
+@monospace-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+// Generic Font Families
+@thin-font-family: @sans-serif-font-family;
+@regular-font-family: @sans-serif-font-family;
+@medium-font-family: @sans-serif-font-family;
+@semibold-font-family: @sans-serif-font-family;
+@bold-font-family: @sans-serif-font-family;
+
+// Generic Font Weights
+@thin-font-weight: 300;
+@regular-font-weight: 400;
+@medium-font-weight: 500;
+@semibold-font-weight: 600;
+@bold-font-weight: 700;
+
+// Font Sizes
+@font-size-xlarge: 2.0;
+@font-size-large: 1.8;
+@font-size-medium: 1.6;
+@font-size-small: 1.4;
+@font-size-xsmall: 1.2;
+
+// Line height
+@line-height-xlarge: 1.8;
+@line-height-large: 1.65;
+@line-height-medium: 1.5;
+@line-height-small: 1.35;
+@line-height-xsmall: 1.2;

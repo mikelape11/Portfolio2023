@@ -1,0 +1,180 @@
+.trayectory {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    
+    @media (min-width: 768px) {
+        padding-bottom: 15rem;
+    }
+
+    &__title {
+        margin-top: 5rem;
+        padding: 5rem 0 5rem;
+        font-size: 3.8rem;
+        color: @white;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            padding: 10rem 0 5rem;
+        }
+
+        @media (min-width: 450px) {
+            font-size: 4.8rem;
+        }
+    }
+
+    &__span {
+        //color: @blue;
+    }
+
+    .timeline {
+        position: relative;
+        height: auto;
+        margin: 0 auto;
+        
+        @media (min-width: 768px) {
+            max-width: 125rem;
+            width: 70%;
+        }
+
+        &__ul {
+            list-style: none;
+        }
+
+        &__title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            margin-bottom: 3.5rem;
+            font-size: 1.6rem;
+            color: @white;
+            font-weight: 600;
+            width: 20rem;
+            text-align: center;
+            border: 1px solid @white;
+            border-radius: 2rem;
+            background: @greyDarker;
+            height: 3.6rem;
+            clear: both;
+        }
+
+        &__li {
+            padding: 2rem;
+            background-color: @greyDark;
+            color: @white;
+            margin: 2rem 2rem 4rem;
+            max-width: 50rem;
+            border-radius: 0.4rem;
+
+            @media (min-width: 768px) {
+                margin: 2rem 0 4rem;
+                max-width: none;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__item {
+            &__date {
+                //color: @blue;
+                font-size: 1.4rem;
+                font-weight: 500;
+                letter-spacing: 0.2rem;
+            }
+    
+            &__title {
+                color: @white;
+                font-size: 2.4rem;
+                font-weight: 600;
+                margin: 1rem 0 1.5rem;
+
+                @media (min-width: 768px) {
+                    margin-top: 0;
+                }
+            }
+    
+            &__text {
+                color: @white;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 768px) {
+
+    .timeline {
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0.2rem;
+            height: 100%;
+            background-color: @grey;
+        }
+
+        &__li {
+            width: 50%;
+            position: relative;
+            margin-bottom: 50px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 0.7rem;
+                width: 0.7rem;
+                border-radius: 50%;
+                background-color: gray;
+                top: 0;
+            }
+
+            &:hover::before {
+                //background-color: @blue;
+            }
+        }
+
+        &__li--left {
+            float: left;
+            clear: right;
+            transform: translateX(-3rem) !important;
+            border-radius: 2.5rem 0 2.5rem 0 !important;
+
+            &:before {
+                transform: translate(50%, -50%);
+                right: -3rem;
+            }
+        }
+
+        &__li--right {
+            float: right;
+            clear: left;
+            transform: translateX(3rem) !important;
+            border-radius: 0 2.5rem 0 2.5rem !important;
+
+            &:before {
+                transform: translate(-50%, -50%);
+                left: -3rem;
+            }
+        }
+        
+        &__item__date {
+            position: absolute;
+            top: -3rem;
+        }
+    }
+}
