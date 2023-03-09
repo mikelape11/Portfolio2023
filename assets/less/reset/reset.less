@@ -7,7 +7,7 @@
 
     --hue: 200;
     --saturation: 80%;
-    --lightness: 45%;
+    --lightness: 55%;
     --main-color: hsl(var(--hue), var(--saturation), var(--lightness));
     
     /* Tipografía */
@@ -80,6 +80,11 @@
   /* Configuramos anclas suaves */
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+
+    @media (min-width: 768px) {
+        scroll-padding-top: 3rem;
+    }
   }
   
   /* Desactivamos estilos por defecto de las principales etiquetas de texto */

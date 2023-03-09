@@ -17,11 +17,22 @@ const openMenu = document.querySelector(".icon--menu");
 const closeMenu = document.querySelector(".icon--exit");
 const flipBtn  = document.querySelector("#tgl-btn");
 const flipBtn2 = document.querySelector("#tgl-btn2");
-
+const menu = document.querySelector('.header__menu');
+const body = document.querySelector("body");
 
 setTimeout(function() {
     header.classList.remove('animation');
-}, 2500);
+}, 2000);
+
+setTimeout(function() {
+    menu.style.opacity = 1;
+}, 2000);
+
+if(header.classList.contains('.animation')){
+    body.style.overflowY = "hidden";
+    body.style.userSelect = "none";
+    body.style.pointerEvents = "none";
+}
 
 window.onscroll = function() {scrollFunction(); menuActiveFunction();};
 
@@ -89,9 +100,6 @@ function closeMenuFunction () {
     header.classList.remove("mobile");  
 }
 
-
-
-
 if(flipBtn) {
     flipBtn.addEventListener("click",  () => {
         document.querySelector(".about__card").classList.add("about__card--active");    
@@ -150,7 +158,7 @@ path.style.strokeDashoffset = length;
 path.getBoundingClientRect();
 // Define our transition
 path.style.transition = path.style.WebkitTransition =
-  'stroke-dashoffset 0.8s ease-in 1.2s';
+  'stroke-dashoffset 0.5s ease-in 1.2s';
 // Go!
 path.style.strokeDashoffset = 0;
 
