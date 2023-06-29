@@ -98,6 +98,10 @@
         margin-bottom: 0.8rem;
         color: @white;
         opacity: 1;
+        max-width: 14rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         // position: absolute;
         // top: 2.5rem;
         // left: 4rem;
@@ -117,9 +121,10 @@
 
         svg {
             fill: none;
-
+            max-width: 12.4rem;
+            
             @media (min-width: 600px) {
-                transform: scale(1.1)
+                max-width: 14rem;
             }
         }
 
@@ -138,9 +143,45 @@
         font-size: 2.8rem;
         font-family: @serif-font-family;
         font-weight: 600;
+        position: relative;
+        overflow: hidden;
 
         @media (min-width: 600px) {
             font-size: 3.2rem;
+        }
+
+        &:before {
+            content: attr(data-text);
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 100%;
+            width: 1.2rem;
+            overflow: hidden;
+        }
+
+        &:after {
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 105%;
+            width: 1.2rem;
+            background-color: rgba(@white, .2);
+            background-clip: text;
+            // color: transparent;
+            -webkit-text-fill-color: transparent;
+            overflow: hidden;
+            animation: shining-text 0.5s linear 1.2s;
+        }
+
+        @keyframes shining-text {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 100%;
+            }
         }
     }
 
@@ -435,24 +476,30 @@
 
         /* All the same stuff for Firefox */
         input[type=range]::-moz-range-thumb {
-            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-            border: 3px solid #000000;
-            height: 2.2rem;
-            width: 2.2rem;
+            -webkit-appearance: none;
+            border: 2px solid @white;
+            height: 1rem;
+            width: 0.4rem;
             border-radius: 0.8rem;
             background: transparent;
             cursor: pointer;
+            // margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+            pointer-events: auto;
         }
 
         /* All the same stuff for IE */
         input[type=range]::-ms-thumb {
-            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-            border: 3px solid #000000;
-            height: 2.2rem;
-            width: 2.2rem;
+            -webkit-appearance: none;
+            border: 2px solid @white;
+            height: 1rem;
+            width: 0.4rem;
             border-radius: 0.8rem;
             background: transparent;
             cursor: pointer;
+            // margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+            box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+            pointer-events: auto;
         }
 
         &__color {

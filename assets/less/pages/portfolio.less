@@ -100,19 +100,19 @@
         }
 
         &__img1 {
-            background: url('/assets/images/Background/hogwartsRules.png');
+            background: url('/assets/images/Background/kafebat.webp');
         }
 
         &__img2 {
-            background: url('/assets/images/Background/pokepedia.png');
+            background: url('/assets/images/Background/pokepedia.webp');
         }
 
         &__img3 {  
-            background: url('/assets/images/Background/netflix.png');
+            background: url('/assets/images/Background/untilteddashboard.webp');
         }
 
         &__img4 {
-            background: url('/assets/images/Background/diseñoportfolio.png');
+            background: url('/assets/images/Background/diseñoportfolio.webp');
         }
 
         &__title {
@@ -139,6 +139,10 @@
             @media (min-width: 1350px) {
                 gap: 1rem 0;
             }
+
+            [class*='icon--']:before { 
+                color: @white !important;
+            }
         }
 
         &__text {
@@ -148,6 +152,7 @@
             align-items: center;
             text-shadow: 2px 0 @black, -2px 0 @black, 0 2px @black, 0 -2px @black,
             1px 1px @black, -1px -1px @black, 1px -1px @black, -1px 1px @black;
+            color: @white;
             
             @media (min-width: 1350px) {
                 font-size: 1.6rem;
@@ -157,6 +162,7 @@
                 font-weight: 600;
                 margin-right: 1rem;
                 white-space: nowrap;
+                color: @white;
                 // text-shadow: none;
             }
         }

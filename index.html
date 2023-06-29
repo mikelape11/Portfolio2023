@@ -9,33 +9,23 @@
     <title>Mikel Apezetxea</title>
     <link rel="icon" type="image/gif" href="assets/images/Logo/logo.png">
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- <script defer src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script> -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="assets/javascript/main.js"></script>
 </head>
 <body class="theme-default">
-
-    <!-- <div class="landing-animation">
-        <h3 class="header__name active">mikel<span class="header__span">ape</span>
-            <svg width="100%" height="10" viewBox="0 0 126 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.00005 4.16164C181.454 -6.71149 -46.26 17.7757 124.999 5.17642" stroke-width="2"/>
-            </svg>
-        </h3>
-    </div> -->
-
-    <!-- <img src="assets/images/Logo/LogoBackground.png" alt="BackgroundLogo" class="background"> -->
-    <div class="bg-circle bg-circle--color"></div>
-    <div class="bg-circle2 bg-circle--white"></div>
+    
+    <div class="bg-circle"></div>
+    <div class="bg-circle2"></div>
 
     <header class="header animation">
 
         <a href="#home" class="header__logo" aria-label="Home">
-            <h3 class="header__name active">mikel<span class="header__span">ape</span>
-                <div class="fade-effect"></div>
+            <h3 class="header__name active" data-text="mikel">mikel<span class="header__span" data-text="ape">ape</span>
             </h3>
+            <div class="fade-effect"></div>
 
-            <svg width="100%" height="10" viewBox="0 0 126 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg preserveAspectRatio="none" width="100%" height="10" viewBox="0 0 126 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.00005 4.16164C181.454 -6.71149 -46.26 17.7757 124.999 5.17642" stroke-width="2"/>
             </svg>
         </a>
@@ -44,11 +34,11 @@
 
             <nav class="header__nav">
                 <ul class="header__ul">
-                    <li class="header__li active" id="home2"><a href="#home" class="header__a">home</a></li>
-                    <li class="header__li" id="about2"><a href="#about" class="header__a">about</a></li>
-                    <li class="header__li" id="trayectory2"><a href="#trayectory" class="header__a">trayectory</a></li>
-                    <li class="header__li" id="portfolio2"><a href="#portfolio" class="header__a">portfolio</a></li>
-                    <li class="header__li" id="contact2"><a href="#contact" class="header__a">contact</a></li>
+                    <li class="header__li active" id="home2"><a href="#home" class="header__a">Inicio</a></li>
+                    <li class="header__li" id="about2"><a href="#about" class="header__a">Sobre</a></li>
+                    <li class="header__li" id="trayectory2"><a href="#trayectory" class="header__a">Trayectoria</a></li>
+                    <li class="header__li" id="portfolio2"><a href="#portfolio" class="header__a">Portfolio</a></li>
+                    <li class="header__li" id="contact2"><a href="#contact" class="header__a">Contacto</a></li>
                 </ul>
                 <div class="header__options">
                     <div title="Open settings" class="header__options__icon icon--settings"></div>
@@ -58,9 +48,9 @@
                         </div>
                         <div class="header__options__space"></div>
                         <div class="header__options__languages">
-                            <div title="Español" class="header__options__language active"><span>es</span></div>
-                            <div title="Euskera" class="header__options__language"><span>eu</span></div>
-                            <div title="English" class="header__options__language"><span>en</span></div>
+                            <div title="Español" id="es" class="header__options__language active"><span>es</span></div>
+                            <div title="Euskera" id="eu" class="header__options__language"><span>eu</span></div>
+                            <div title="English" id="en" class="header__options__language"><span>en</span></div>
                         </div>
                     </div>
                 </div>
@@ -96,9 +86,9 @@
 
         <div class="home__background"></div>
         <div class="home__glass-container">
-            <h2 class="home__hello">Hi, I'm</h2>
-            <h1 class="home__name"><span class="home__name__span">Mikel</span> Apezetxea<span class="home__name__span">.</span></h1>
-            <h2 class="home__description">ux/ui and web designer</h2>
+            <h2 class="home__hello">Hola<span class="home__span">!</span></h2>
+            <h1 class="home__name"><span class="home__span">Mikel</span> Apezetxea<span class="home__span">.</span></h1>
+            <h2 class="home__description">Diseñador ux/ui y web</h2>
 
             <div class="home__links">
                 <div class="home__link icon--twitter"></div>
@@ -108,10 +98,13 @@
         </div>
 
         <a href="#about" aria-label="About" class="home__button icon--arrowdown"></a>
-        <span class="home__copy">© 2022 Mikel Apezetxea</span>
+        <span class="home__copy">© 2023 Mikel Apezetxea</span>
 
     </section>
 
+    <div id="blob"></div>
+    <div id="blur"></div>
+    
     <section class="about" id="about">
 
         <div class="about__content">
@@ -123,7 +116,7 @@
                     <div class="about__info">
 
                         <h2 class="about__title">Sobre mi<span class="about__span">.</span></h2>
-                        <p class="about__text">Me llamo Mikel Apezetxea, nací en el 99 y soy de Euskadi/Pais Vasco (España). Soy un diseñador centrado en UI/UX design, visual design, web design y prototyping (creación de prototipos), mis objetivos son ayudar a los clientes marcar la diferencia en el mercado con mis aptitudes para el diseño, hacer un trabajo limpio y organizado y seguir aprendiendo diariamente.</p>
+                        <p class="about__text">Me llamo Mikel Apezetxea, nací en el 99 y soy de Euskadi/Pais Vasco (España). Soy un diseñador centrado en UI/UX design, visual design, web design y prototyping (creación de prototipos). Mis objetivos son ayudar a los clientes marcar la diferencia en el mercado con mis aptitudes para el diseño, hacer un trabajo limpio y organizado y seguir aprendiendo diariamente.</p>
                         <p class="about__text">Estudié desarrollo de aplicaciones web y multiplataforma durante 4 años. Mientras avanzaba con mis estudios enseguida me dí cuenta de lo que realmente me gustaba era todo lo relacionado con el mundo del diseño.</p>
 
                         <div class="about__list">
@@ -173,17 +166,13 @@
                     </div>
                     
                     <div class="about__actions">
-                        <div class="icon--curriculum about__button">curriculum</div>
+                        <a href="assets/images/Curriculum2023.pdf" class="icon--curriculum about__button" download>curriculum</a>
                         <div class="about__more icon--plus" id="tgl-btn"></div>
                     </div>
                 </div>
 
                 <div class="about__card__back">
                     <div class="about__info">
-                        <h2 class="about__title">Sobre mí<span class="about__span">.</span></h2>
-                        <p class="about__text" data-aos="fade-up">Me llamo Mikel Apezetxea, nací en el 99 y soy de Euskadi/Pais Vasco (España). Soy un diseñador centrado en UI/UX design, visual design, web design y prototyping (creación de prototipos) que ayudo a la gente a marcar la diferencia.</p>
-                        <p class="about__text" data-aos="fade-up">Estudié desarrollo de aplicaciones web y multiplataforma durante 4 años, mientras avanzaba con mis estudios enseguida me dí cuenta de lo que realmente me gustaba era todo lo relacionado con el mundo del diseño.</p>
-                        <p class="about__text" data-aos="fade-up">PONER BLOQUES Que hago, diseño todo tipo de aplicaciones movil, web..., maqueto o hago diseño web con html, css y javascript, diseño responsive, seo basico </p>
                         
                         <div class="about__list">
                             <h2 class="about__title">Que hago<span class="about__span">.</span></h2>
@@ -231,7 +220,7 @@
                     </div>            
 
                     <div class="about__actions">
-                        <div class="icon--curriculum about__button">curriculum</div>
+                        <a href="assets/images/Curriculum2023.pdf" class="icon--curriculum about__button" download>curriculum</a>
                         <div class="about__more icon--plus" id="tgl-btn2"></div>
                     </div>
                 </div>
@@ -261,16 +250,16 @@
 
                 <li class="timeline__li timeline__li--left" data-aos="fade-up">
                     <div class="timeline__item">
-                        <span class="timeline__item__date">07th September, 2017</span>
+                        <span class="timeline__item__date">06 Septiembre, 2017</span>
                         <h3 class="timeline__item__title">Desarrollo de aplicaciones Web</h3>
-                        <p class="timeline__item__text">Lörem ipsum reda porartad hexavis om enveckasförsvar e-demokrati infras prekuvis. Ol kvasistat: abplastisk, detotal pesusamma. Pladatt kroligt trapp och biolagisk. Nejost plogga inte antisk osm av pask i mögäsm vik. Mödade lataning aktigt vithetsnorm kana i rakrogon i hysm antiraliga. Palyrtad pör. Besk antisobelt. Pantet niliga kangar även om chippa, och demityp och syrade. </p>
+                        <p class="timeline__item__text">Durante 2017 y 2019 estudié desarrollo de aplicaciones web en el instituto Plaiaundi en Irún. En esta formación profesional aprendí a desarrollar interfaces en aplicaciones web y a su vez desarrollar aplicaciones web con acceso a bases de datos utilizando lenguajes, objetos de acceso y herramientas de mapeo adecuados a las especificaciones.</p>
                     </div>
                 </li>
                 <li class="timeline__li timeline__li--right" data-aos="fade-up">
                     <div class="timeline__item">
-                        <span class="timeline__item__date">07th September, 2017</span>
+                        <span class="timeline__item__date">07 Septiembre, 2019</span>
                         <h3 class="timeline__item__title">Desarrollo de aplicaciones Multiplataforma</h3>
-                        <p class="timeline__item__text">Lörem ipsum reda porartad hexavis om enveckasförsvar e-demokrati infras prekuvis. Ol kvasistat: abplastisk, detotal pesusamma. Pladatt kroligt trapp och biolagisk. Nejost plogga inte antisk osm av pask i mögäsm vik. Mödade lataning aktigt vithetsnorm kana i rakrogon i hysm antiraliga. Palyrtad pör. Besk antisobelt. Pantet niliga kangar även om chippa, och demityp och syrade. </p>
+                        <p class="timeline__item__text">Después de terminar el grado de desarrollo de aplicaciones web, seguí con el grado de desarrollo de aplicaciones multiplataforma, tambíen en el el instituto Plaiaundi. En este caso aprendí a desarrollar, implantar, documentar y mantener aplicaciones informáticas multiplataforma, utilizando tecnologías y entornos de desarrollo específicos, garantizando el acceso a los datos de forma segura y cumpliendo los criterios de «usabilidad» y calidad exigidas en los estándares establecidos. </p>
                     </div>
                 </li>
 
@@ -278,30 +267,30 @@
 
                 <li class="timeline__li timeline__li--left" data-aos="fade-up">
                     <div class="timeline__item">
-                        <span class="timeline__item__date">07th September, 2017</span>
-                        <h3 class="timeline__item__title">Desarrollo de aplicaciones Web</h3>
-                        <p class="timeline__item__text">Lörem ipsum reda porartad hexavis om enveckasförsvar e-demokrati infras prekuvis. Ol kvasistat: abplastisk, detotal pesusamma. Pladatt kroligt trapp och biolagisk. Nejost plogga inte antisk osm av pask i mögäsm vik. Mödade lataning aktigt vithetsnorm kana i rakrogon i hysm antiraliga. Palyrtad pör. Besk antisobelt. Pantet niliga kangar även om chippa, och demityp och syrade. </p>
+                        <span class="timeline__item__date">26 Febrero, 2020</span>
+                        <h3 class="timeline__item__title">Ibermática</h3>
+                        <p class="timeline__item__text">Mientras terminaba mi primer grado de desarrollo de aplicaciones web, estuve Ibermática (Donostia - San Sebastian) de practicas. La mayor parte trabajé como front-end developer, diseñando y creando componentes mientras aprendía el lenguaje Angular y mejorando las buenas practicas sobre mantenimiento de proyectos. </p>
                     </div>
                 </li>
                 <li class="timeline__li timeline__li--right" data-aos="fade-up">
                     <div class="timeline__item">
-                        <span class="timeline__item__date">07th September, 2017</span>
-                        <h3 class="timeline__item__title">Desarrollo de aplicaciones Web</h3>
-                        <p class="timeline__item__text">Lörem ipsum reda porartad hexavis om enveckasförsvar e-demokrati infras prekuvis. Ol kvasistat: abplastisk, detotal pesusamma. Pladatt kroligt trapp och biolagisk. Nejost plogga inte antisk osm av pask i mögäsm vik. Mödade lataning aktigt vithetsnorm kana i rakrogon i hysm antiraliga. Palyrtad pör. Besk antisobelt. Pantet niliga kangar även om chippa, och demityp och syrade. </p>
+                        <span class="timeline__item__date">04 Marzo, 2021</span>
+                        <h3 class="timeline__item__title">Zitu</h3>
+                        <p class="timeline__item__text">Al finalizar la segunda evaluación de mi segundo grado, desarrollo de aplicaicones multiplataforma, trabajé en la empresa Zitu, situado también en Donostia-Sansebastian. En esta empresa rediseñé una aplicación de reservas para una sociedad y reescribí/mejoré el código del mismo proyecto. </p>
                     </div>
                 </li>
                 <li class="timeline__li timeline__li--left" data-aos="fade-up">
                     <div class="timeline__item">
-                        <span class="timeline__item__date">07th September, 2017</span>
-                        <h3 class="timeline__item__title">Desarrollo de aplicaciones Web</h3>
-                        <p class="timeline__item__text">Lörem ipsum reda porartad hexavis om enveckasförsvar e-demokrati infras prekuvis. Ol kvasistat: abplastisk, detotal pesusamma. Pladatt kroligt trapp och biolagisk. Nejost plogga inte antisk osm av pask i mögäsm vik. Mödade lataning aktigt vithetsnorm kana i rakrogon i hysm antiraliga. Palyrtad pör. Besk antisobelt. Pantet niliga kangar även om chippa, och demityp och syrade. </p>
+                        <span class="timeline__item__date">10 Junio, 2021</span>
+                        <h3 class="timeline__item__title">Diversius</h3>
+                        <p class="timeline__item__text">Después de finalizar los estudios, empecé a trabajar a tiempo completo en Diversius, una empresa situada en Renteria en Guipuzcoa. En esta empresa empecé trabajando mas como diseñador creando diferente prototipos de diferentes aplicaciones y webs con la herramienta figma y después de ello maquetarlos mediante HTML, CSS y JavaScript.</p>
                     </div>
                 </li>
                 <li class="timeline__li timeline__li--right" data-aos="fade-up">
                     <div class="timeline__item">
-                        <span class="timeline__item__date">07th September, 2017</span>
-                        <h3 class="timeline__item__title">Desarrollo de aplicaciones Web</h3>
-                        <p class="timeline__item__text">Lörem ipsum reda porartad hexavis om enveckasförsvar e-demokrati infras prekuvis. Ol kvasistat: abplastisk, detotal pesusamma. Pladatt kroligt trapp och biolagisk. Nejost plogga inte antisk osm av pask i mögäsm vik. Mödade lataning aktigt vithetsnorm kana i rakrogon i hysm antiraliga. Palyrtad pör. Besk antisobelt. Pantet niliga kangar även om chippa, och demityp och syrade. </p>
+                        <span class="timeline__item__date">11 Junio, 2022</span>
+                        <h3 class="timeline__item__title">Autodidacta</h3>
+                        <p class="timeline__item__text">Actualmente, después de estar un tiempo trabajando, el siguiente año lo dediqué en mejorar mis conocimientos en el mundo del diseño aprendiendo por mi cuenta, mejorando mis habilidades y conocimientos de diseño sobretodo en Figma, Photoshop y otras herramientas de diseño. </p>
                     </div>
                 </li>
             </ul>
@@ -317,12 +306,11 @@
 
             <div class="portfolio__card" data-aos="fade-up">
                 <div class="portfolio__card__img1"></div>
-                <h2 class="portfolio__card__title">Hogwarts Rules</h2>
+                <h2 class="portfolio__card__title">Kafe Bat</h2>
                 <div class="portfolio__card__info">
-                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span> June 04, 2022</p>
-                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span> Figma</p>
-                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Link</p>
-                    <p class="portfolio__card__text icon--github"><span>Github ¬ </span>HogwartsRulesFlutter</p>
+                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span>4 Mayo, 2023</p>
+                    <p class="portfolio__card__text icon--tools"><span>Tecnologias ¬ </span> Figma</p>
+                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Kafe Bat</p>
                 </div>
             </div>
 
@@ -330,21 +318,19 @@
                 <div class="portfolio__card__img2"></div>
                 <h2 class="portfolio__card__title">Pokepedia</h2>
                 <div class="portfolio__card__info">
-                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span>June 04, 2022</p>
-                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span>Figma</p>
-                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Link</p>
-                    <p class="portfolio__card__text icon--github"><span>Github ¬ </span>HogwartsRulesFlutter</p>
+                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span>4 Julio, 2022</p>
+                    <p class="portfolio__card__text icon--tools"><span>Tecnologias ¬ </span>Figma</p>
+                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Pokepedia</p>
                 </div>
             </div>
 
             <div class="portfolio__card" data-aos="fade-up">
                 <div class="portfolio__card__img3"></div>
-                <h2 class="portfolio__card__title">Netflix Clone</h2>
+                <h2 class="portfolio__card__title">Untilted Dashboard</h2>
                 <div class="portfolio__card__info">
-                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span>June 04, 2022</p>
-                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span>Figma</p>
-                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Link</p>
-                    <p class="portfolio__card__text icon--github"><span>Github ¬ </span>HogwartsRulesFlutter</p>
+                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span>15 Abril, 2023</p>
+                    <p class="portfolio__card__text icon--tools"><span>Tecnologias ¬ </span>Figma</p>
+                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Untilted Dashboard</p>
                 </div>
             </div>
 
@@ -352,10 +338,9 @@
                 <div class="portfolio__card__img4"></div>
                 <h2 class="portfolio__card__title">Portfolio Design</h2>
                 <div class="portfolio__card__info">
-                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span>June 04, 2022</p>
-                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span>Figma</p>
-                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Link</p>
-                    <p class="portfolio__card__text icon--github"><span>Github ¬ </span>HogwartsRulesFlutter</p>
+                    <p class="portfolio__card__text icon--plus"><span>Creado ¬ </span>4 Diciembre, 2022</p>
+                    <p class="portfolio__card__text icon--tools"><span>Tecnologias ¬ </span>Html - Css - Js</p>
+                    <p class="portfolio__card__text icon--github"><span>Github ¬ </span>Portfolio</p>
                 </div>
             </div>
             
@@ -363,59 +348,11 @@
 
     </section>
 
-    <section class="contact" id="contact" data-aos="fade-up">
+    <div class="contact" id="contact" data-aos="fade-up">
     
-        <h2 class="contact__title">Contact<span class="contact__span">.</span></h2>
+        <h2 class="contact__title">Contacto<span class="contact__span">.</span></h2>
 
         <div class="contact__content">
-
-            <form class="contact__form">
-    
-                <div class="row">
-    
-                    <div class="fields">
-    
-                        <div class="field" data-aos="fade-up">
-                            <label for="firstname">First Name</label>
-                            <input id="firstname" name="firstname" type="text" placeholder="First Name">
-                        </div>
-    
-                        <div class="field" data-aos="fade-up">
-                            <label for="lastname">Last Name</label>
-                            <input id="lastname" name="lastname" type="text" placeholder="Last Name">
-                        </div>
-    
-                    </div>
-    
-                </div>
-    
-                <div class="row">
-                    
-                    <div class="field" data-aos="fade-up">
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="text" placeholder="Email">
-                    </div>
-    
-                </div>
-    
-                <div class="row">
-    
-                    <div class="fields" data-aos="fade-up">
-    
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" type="text" placeholder="Your message..."></textarea>
-                        </div>
-    
-                    </div>
-                    
-                </div>
-
-                <div class="row">
-                    <button type="submit" class="icon--curriculum contact__button" data-aos="fade-up">Enviar mensaje</button>
-                </div>
-    
-            </form>
     
             <div class="contact__items">
     
@@ -427,8 +364,8 @@
     
                 <div class="contact__item contact__item--twitter" data-aos="fade-up">
                     <div class="contact__item__icon icon--twitter"></div>
-                    <p class="contact__item__title">Twitter</p>
-                    <p class="contact__item__name">@mikelape11</p>
+                    <p class="contact__item__title">Gmail</p>
+                    <p class="contact__item__name">mikelapezetxea2</p>
                 </div>
     
                 <div class="contact__item contact__item--telegram" data-aos="fade-up">
@@ -441,10 +378,10 @@
 
         </div>
 
-    </section>
+    </div>
 
     <footer class="footer">
-        <span class="footer__copy">© 2022 Mikel Apezetxea</span>
+        <span class="footer__copy">© 2023 Mikel Apezetxea</span>
     </footer>
 
 </body>

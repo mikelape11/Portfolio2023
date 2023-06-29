@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Mikel Apezetxea Portfolio">
+    <meta name="keywords" content="Portfolio">
+    <meta name="author" content="Mikel Apezetxea">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mikel Apezetxea</title>
+    <link rel="icon" type="image/gif" href="../assets/images/Logo/logo.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="../assets/javascript/main.js"></script>
+</head>
+<body class="theme-default">
+    
+    <div class="bg-circle"></div>
+    <div class="bg-circle2"></div>
+
+    <header class="header animation">
+
+        <a href="#home" class="header__logo" aria-label="Home">
+            <h3 class="header__name active" data-text="mikel">mikel<span class="header__span" data-text="ape">ape</span>
+            </h3>
+            <div class="fade-effect"></div>
+
+            <svg preserveAspectRatio="none" width="100%" height="10" viewBox="0 0 126 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.00005 4.16164C181.454 -6.71149 -46.26 17.7757 124.999 5.17642" stroke-width="2"/>
+            </svg>
+        </a>
+
+        <div class="header__menu">
+
+            <nav class="header__nav">
+                <ul class="header__ul">
+                    <li class="header__li active" id="home2"><a href="#home" class="header__a">home</a></li>
+                    <li class="header__li" id="about2"><a href="#about" class="header__a">about</a></li>
+                    <li class="header__li" id="trayectory2"><a href="#trayectory" class="header__a">trayectory</a></li>
+                    <li class="header__li" id="portfolio2"><a href="#portfolio" class="header__a">portfolio</a></li>
+                    <li class="header__li" id="contact2"><a href="#contact" class="header__a">contact</a></li>
+                </ul>
+                <div class="header__options">
+                    <div title="Open settings" class="header__options__icon icon--settings"></div>
+                    <div class="header__options__content">
+                        <div class="header__options__slider">
+                            <input title="ColorSwitcher" name="colorInput" type="range" min="0" max="360" class="header__options__input">
+                        </div>
+                        <div class="header__options__space"></div>
+                        <div class="header__options__languages">
+                            <div title="Español" id="es" class="header__options__language"><span>es</span></div>
+                            <div title="Euskera" id="eu" class="header__options__language"><span>eu</span></div>
+                            <div title="English" id="en" class="header__options__language active"><span>en</span></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="icon--exit"></div>
+
+        <div class="header__progress-container">
+            <div class="header__progress-bar" id="scrollBar"></div>
+        </div>
+
+    </header>
+
+    <div class="sidebar">
+        <div class="sidebar__line"></div>
+        <div class="sidebar__indicators">
+            <a href="#home" class="sidebar__indicator active" id="home2">01</a>
+            <a href="#about" class="sidebar__indicator" id="about2">02</a>
+            <a href="#trayectory" class="sidebar__indicator" id="trayectory2">03</a>
+            <a href="#portfolio" class="sidebar__indicator" id="portfolio2">04</a>
+            <a href="#contact" class="sidebar__indicator" id="contact2">05</a>
+        </div>
+        <div class="sidebar__line"></div>
+        <div class="sidebar__actions">
+            <a href="#home" aria-label="ScrollTop" class="sidebar__button icon--arrowup scroll-top hide"></a>
+            <a href="#menu" aria-label="Menu" class="sidebar__button icon--menu"></a>
+        </div>
+    </div>
+
+    <section class="home" id="home">
+
+        <div class="home__background"></div>
+        <div class="home__glass-container">
+            <h2 class="home__hello">Hello<span class="home__span">!</span></h2>
+            <h1 class="home__name"><span class="home__span">Mikel</span> Apezetxea<span class="home__span">.</span></h1>
+            <h2 class="home__description">ux/ui and web designer</h2>
+
+            <div class="home__links">
+                <div class="home__link icon--twitter"></div>
+                <div class="home__link icon--linkedin"></div>
+                <div class="home__link icon--github"></div>
+            </div>
+        </div>
+
+        <a href="#about" aria-label="About" class="home__button icon--arrowdown"></a>
+        <span class="home__copy">© 2023 Mikel Apezetxea</span>
+
+    </section>
+
+    <div id="blob"></div>
+    <div id="blur"></div>
+    
+    <section class="about" id="about">
+
+        <div class="about__content">
+
+            <div class="about__card" data-aos="fade-up">
+
+                <div class="about__card__front">
+
+                    <div class="about__info">
+
+                        <h2 class="about__title">About me<span class="about__span">.</span></h2>
+                        <p class="about__text">My name is Mikel Apezetxea, I was born in 1999 and I am from Euskadi/Basque Country (Spain). I am a designer focused on UI/UX design, visual design, web design and prototyping. My goals are to help clients make a difference in the market with my design skills, doing clean and organized work and keep learning daily.</p>
+                        <p class="about__text">I studied web and cross-platform application development for 4 years. As I progressed with my studies, I immediately realized that what I really liked was everything related to the world of design.</p>
+
+                        <div class="about__list">
+                            <h2 class="about__title">What I do<span class="about__span">.</span></h2>
+                            
+                            <div class="about__items">
+                                <div class="about__item">
+                                    <div class="about__item__icon icon--design"></div>
+                                    <div class="about__item__content">
+                                        <p class="about__item__title">Web/Application design</p>
+                                        <p class="about__item__name">I create all kinds of websites or custom prototypes for all applications.</p>
+                                    </div>
+                                </div>
+            
+                                <div class="about__item">
+                                    <div class="about__item__icon icon--responsive"></div>
+                                    <div class="about__item__content">
+                                        <p class="about__item__title">Responsive design</p>
+                                        <p class="about__item__name">Todos los diseños son adaptables a diferentes dispositivos, moviles, tabletas o portatiles.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="about__item">
+                                    <div class="about__item__icon icon--seo"></div>
+                                    <div class="about__item__content">
+                                        <p class="about__item__title">SEO - Search Engine Optimization</p>
+                                        <p class="about__item__name">I optimize websites so that they appear as high as possible in Internet search browsers.</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+
+                        </div>
+
+                        <h3 class="about__subtitle">Skills<span class="about__span">.</span></h3>
+                        <div class="about__icons">
+                            <div class="about__icon icon--html" title="HTML"></div>
+                            <div class="about__icon icon--css" title="CSS"></div>
+                            <div class="about__icon icon--javascript" title="JAVASCRIPT"></div>
+                            <div class="about__icon icon--angular" title="ANGULAR"></div>
+                            <div class="about__icon icon--figma" title="FIGMA"></div>
+                            <div class="about__icon icon--jquery" title="JQUERY"></div>
+                            <div class="about__icon icon--sass" title="SASS"></div>
+                            <div class="about__icon icon--less" title="LESS"></div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="about__actions">
+                        <a href="assets/images/Curriculum2023.pdf" class="icon--curriculum about__button" download>curriculum</a>
+                        <div class="about__more icon--plus" id="tgl-btn"></div>
+                    </div>
+                </div>
+
+                <div class="about__card__back">
+                    <div class="about__info">
+                        <h2 class="about__title">About me<span class="about__span">.</span></h2>
+                        <p class="about__text">My name is Mikel Apezetxea, I was born in 1999 and I am from Euskadi/Basque Country (Spain). I am a designer focused on UI/UX design, visual design, web design and prototyping. My goals are to help clients make a difference in the market with my design skills, doing clean and organized work and keep learning daily.</p>
+                        <p class="about__text">I studied web and cross-platform application development for 4 years. As I progressed with my studies, I immediately realized that what I really liked was everything related to the world of design.</p>
+
+                        <div class="about__list">
+                            <h2 class="about__title">What I do<span class="about__span">.</span></h2>
+                            
+                            <div class="about__items">
+                                <div class="about__item">
+                                    <div class="about__item__icon icon--design"></div>
+                                    <div class="about__item__content">
+                                        <p class="about__item__title">Web/Application design</p>
+                                        <p class="about__item__name">I create all kinds of websites or custom prototypes for all applications.</p>
+                                    </div>
+                                </div>
+            
+                                <div class="about__item">
+                                    <div class="about__item__icon icon--responsive"></div>
+                                    <div class="about__item__content">
+                                        <p class="about__item__title">Responsive design</p>
+                                        <p class="about__item__name">Todos los diseños son adaptables a diferentes dispositivos, moviles, tabletas o portatiles.</p>
+                                    </div>
+                                </div>
+        
+                                <div class="about__item">
+                                    <div class="about__item__icon icon--seo"></div>
+                                    <div class="about__item__content">
+                                        <p class="about__item__title">SEO - Search Engine Optimization</p>
+                                        <p class="about__item__name">I optimize websites so that they appear as high as possible in Internet search browsers.</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+
+                        </div>
+
+                        <h3 class="about__subtitle">Skills<span class="about__span">.</span></h3>
+                        <div class="about__icons">
+                            <div class="about__icon icon--html" title="HTML"></div>
+                            <div class="about__icon icon--css" title="CSS"></div>
+                            <div class="about__icon icon--javascript" title="JAVASCRIPT"></div>
+                            <div class="about__icon icon--angular" title="ANGULAR"></div>
+                            <div class="about__icon icon--figma" title="FIGMA"></div>
+                            <div class="about__icon icon--jquery" title="JQUERY"></div>
+                            <div class="about__icon icon--sass" title="SASS"></div>
+                            <div class="about__icon icon--less" title="LESS"></div>
+                        </div>
+                    </div>            
+
+                    <div class="about__actions">
+                        <a href="assets/images/Curriculum2023.pdf" class="icon--curriculum about__button" download>curriculum</a>
+                        <div class="about__more icon--plus" id="tgl-btn2"></div>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="about__profile" data-aos="fade-up">
+                <div class="about__box">
+                    <div>
+                        <img src="../assets/images/me.webp" alt="Mikel Apezetxea" class="about__img">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="trayectory" id="trayectory" data-aos="fade-up">
+
+        <h2 class="trayectory__title">Trayectory<span class="trayectory__span">.</span></h2>
+
+        <div class="timeline" >
+            <ul class="timeline__ul">
+
+                <li class="timeline__title">Education</li>
+
+                <li class="timeline__li timeline__li--left" data-aos="fade-up">
+                    <div class="timeline__item">
+                        <span class="timeline__item__date">06th September, 2017</span>
+                        <h3 class="timeline__item__title">Web applications development</h3>
+                        <p class="timeline__item__text">During 2017 and 2019 I studied web application development at the Plaiaundi institute in Irún. In this professional training I learned to develop interfaces in web applications and in turn develop web applications with access to databases using languages, access objects and mapping tools appropriate to the specifications.</p>
+                    </div>
+                </li>
+                <li class="timeline__li timeline__li--right" data-aos="fade-up">
+                    <div class="timeline__item">
+                        <span class="timeline__item__date">07th September, 2019</span>
+                        <h3 class="timeline__item__title">Cross-platform application development</h3>
+                        <p class="timeline__item__text">After finishing the degree in web application development, I continued with the degree in cross-platform application development, also at the Plaiaundi institute. In this case, I learned to develop, implement, document and maintain multiplatform computer applications, using specific technologies and development environments, guaranteeing access to data safely and meeting the "usability" and quality criteria required by the established standards.</p>
+                    </div>
+                </li>
+
+                <li class="timeline__title">Experience</li>
+
+                <li class="timeline__li timeline__li--left" data-aos="fade-up">
+                    <div class="timeline__item">
+                        <span class="timeline__item__date">26th February, 2020</span>
+                        <h3 class="timeline__item__title">Ibermática</h3>
+                        <p class="timeline__item__text">While I was finishing my first degree in web application development, I did an internship at Ibermática (Donostia - San Sebastian). Most of it I worked as a front-end developer, designing and creating components while learning the Angular language and improving good practices on project maintenance.</p>
+                    </div>
+                </li>
+                <li class="timeline__li timeline__li--right" data-aos="fade-up">
+                    <div class="timeline__item">
+                        <span class="timeline__item__date">04th March, 2021</span>
+                        <h3 class="timeline__item__title">Zitu</h3>
+                        <p class="timeline__item__text">At the end of the second evaluation of my second degree, development of multiplatform applications, I worked at the company Zitu, also located in Donostia-Sansebastian. In this company I redesigned a booking application for a company and rewrote/improved the code of the same project. </p>
+                    </div>
+                </li>
+                <li class="timeline__li timeline__li--left" data-aos="fade-up">
+                    <div class="timeline__item">
+                        <span class="timeline__item__date">10th September, 2021</span>
+                        <h3 class="timeline__item__title">Diversius</h3>
+                        <p class="timeline__item__text">After finishing my studies, I started working full time at Diversius, a company located in Renteria in Guipuzcoa. In this company I started working more as a designer creating different prototypes of different applications and websites with the figma tool and after that layout them using HTML, CSS and JavaScript.</p>
+                    </div>
+                </li>
+                <li class="timeline__li timeline__li--right" data-aos="fade-up">
+                    <div class="timeline__item">
+                        <span class="timeline__item__date">11th June, 2022</span>
+                        <h3 class="timeline__item__title">Autodidact</h3>
+                        <p class="timeline__item__text">Currently, after working for a while, I dedicated the following year to improve my knowledge in the world of design by learning on my own, improving my design skills and knowledge, especially in Figma, Photoshop and other design tools.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="portfolio" id="portfolio" data-aos="fade-up">
+
+        <h2 class="portfolio__title">Portfolio<span class="portfolio__span">.</span></h2>
+
+        <div class="portfolio__cards">
+
+            <div class="portfolio__card" data-aos="fade-up">
+                <div class="portfolio__card__img1"></div>
+                <h2 class="portfolio__card__title">Kafe Bat</h2>
+                <div class="portfolio__card__info">
+                    <p class="portfolio__card__text icon--plus"><span>Created ¬ </span>4th May, 2023</p>
+                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span> Figma</p>
+                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Kafe Bat</p>
+                </div>
+            </div>
+
+            <div class="portfolio__card" data-aos="fade-up">
+                <div class="portfolio__card__img2"></div>
+                <h2 class="portfolio__card__title">Pokepedia</h2>
+                <div class="portfolio__card__info">
+                    <p class="portfolio__card__text icon--plus"><span>Created ¬ </span>4th July, 2022</p>
+                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span>Figma</p>
+                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Pokepedia</p>
+                </div>
+            </div>
+
+            <div class="portfolio__card" data-aos="fade-up">
+                <div class="portfolio__card__img3"></div>
+                <h2 class="portfolio__card__title">Untilted Dashboard</h2>
+                <div class="portfolio__card__info">
+                    <p class="portfolio__card__text icon--plus"><span>Created ¬ </span>15th April, 2023</p>
+                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span>Figma</p>
+                    <p class="portfolio__card__text icon--figma"><span>Demo ¬ </span>Untilted Dashboard</p>
+                </div>
+            </div>
+
+            <div class="portfolio__card" data-aos="fade-up">
+                <div class="portfolio__card__img4"></div>
+                <h2 class="portfolio__card__title">Portfolio Design</h2>
+                <div class="portfolio__card__info">
+                    <p class="portfolio__card__text icon--plus"><span>Created ¬ </span>4th December, 2022</p>
+                    <p class="portfolio__card__text icon--tools"><span>Technologies ¬ </span>Html - Css - Js</p>
+                    <p class="portfolio__card__text icon--github"><span>Github ¬ </span>Portfolio</p>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <div class="contact" id="contact" data-aos="fade-up">
+    
+        <h2 class="contact__title">Contact<span class="contact__span">.</span></h2>
+
+        <div class="contact__content">
+    
+            <div class="contact__items">
+    
+                <div class="contact__item contact__item--linkedin" data-aos="fade-up">
+                    <div class="contact__item__icon icon--linkedin"></div>
+                    <p class="contact__item__title">Linkedin</p>
+                    <p class="contact__item__name">@mikelape11</p>
+                </div>
+    
+                <div class="contact__item contact__item--twitter" data-aos="fade-up">
+                    <div class="contact__item__icon icon--twitter"></div>
+                    <p class="contact__item__title">Gmail</p>
+                    <p class="contact__item__name">mikelapezetxea2</p>
+                </div>
+    
+                <div class="contact__item contact__item--telegram" data-aos="fade-up">
+                    <div class="contact__item__icon icon--telegram"></div>
+                    <p class="contact__item__title">Telegram</p>
+                    <p class="contact__item__name">@mikelape11</p>
+                </div>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <span class="footer__copy">© 2023 Mikel Apezetxea</span>
+    </footer>
+
+</body>
+</html>
