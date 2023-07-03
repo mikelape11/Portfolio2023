@@ -5,8 +5,11 @@
   --green: #08D040;
   --hue: 200;
   --saturation: 80%;
+  --saturation2: 90%;
   --lightness: 55%;
+  --lightness2: 18%;
   --main-color: hsl(var(--hue), var(--saturation), var(--lightness));
+  --selection-color: hsl(var(--hue), var(--saturation2), var(--lightness2));
   /* Tipografía */
   --tipo-principal: Montserrat, sans-serif;
   --tipo-secundaria: Plus Jakarta Sans, sans-serif;
@@ -108,11 +111,11 @@ q:after {
 }
 /* Configuramos el texto que seleccionamos */
 ::-moz-selection {
-  background-color: var(--main-color);
+  background-color: var(--selection-color);
   color: #FFFFFF;
 }
 ::selection {
-  background-color: var(--main-color);
+  background-color: var(--selection-color);
   color: #FFFFFF;
 }
 /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -470,6 +473,42 @@ body {
   text-indent: 0;
   color: #FFFFFF;
 }
+.icon--behance:before {
+  content: "\e918";
+  font-family: 'portfolio';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+  color: #FFFFFF;
+}
+.icon--dribbble:before {
+  content: "\e919";
+  font-family: 'portfolio';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+  color: #FFFFFF;
+}
+.icon--mail:before {
+  content: "\e91a";
+  font-family: 'portfolio';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+  color: #FFFFFF;
+}
 /*
  * Fonts
  */
@@ -598,6 +637,8 @@ body {
 .theme-default .icon--arrowdown:hover::before,
 .theme-default .icon--menu:hover::before,
 .theme-default .icon--arrowup:hover::before,
+.theme-default .icon--behance:hover::before,
+.theme-default .icon--dribbble:hover::before,
 .theme-default .icon--plus:hover::before {
   color: var(--main-color);
 }
@@ -1809,15 +1850,18 @@ body .header.animation {
 .home__link {
   cursor: pointer;
 }
-.home .icon--twitter::before,
+.home .icon--linkedin::before,
 .home .icon--github::before,
-.home .icon--linkedin::before {
-  font-size: 3.2rem;
+.home .icon--behance::before,
+.home .icon--dribbble::before {
+  font-size: 3.4rem;
 }
 @media (min-width: 450px) {
-  .home .icon--twitter::before,
+  .home .icon--linkedin::before,
   .home .icon--github::before,
-  .home .icon--linkedin::before {
+  .home .icon--behance::before,
+  .home .icon--dribbble::before {
+    font-size: 3.2rem;
     font-size: 4rem;
   }
 }
@@ -2118,7 +2162,7 @@ body .header.animation {
 @media (min-width: 500px) {
   .about__item {
     padding: 2rem 4rem;
-    gap: 5rem;
+    gap: 4rem;
   }
 }
 @media (min-width: 768px) {
@@ -2136,8 +2180,14 @@ body .header.animation {
           flex-direction: column;
 }
 .about__item__icon {
-  min-width: 5.5rem;
   padding-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 7rem;
 }
 @media (min-width: 500px) {
   .about__item__icon {
@@ -2147,7 +2197,6 @@ body .header.animation {
 .about__item__icon:before {
   font-size: 3.2rem;
   margin: 0;
-  margin-bottom: 0.8rem;
 }
 .about__item__title,
 .about__item__name {
@@ -2392,7 +2441,7 @@ body .header.animation {
 .trayectory .timeline__item__text {
   color: #FFFFFF;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 @media (min-width: 768px) {
   .timeline:before {
@@ -2830,7 +2879,7 @@ body .header.animation {
 @media (min-width: 768px) {
   .contact__items {
     padding: 0;
-    width: 70%;
+    width: 80%;
   }
 }
 @media (min-width: 800px) {

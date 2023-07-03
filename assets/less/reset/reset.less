@@ -7,8 +7,11 @@
 
     --hue: 200;
     --saturation: 80%;
+    --saturation2: 90%;
     --lightness: 55%;
+    --lightness2: 18%;
     --main-color: hsl(var(--hue), var(--saturation), var(--lightness));
+    --selection-color: hsl(var(--hue), var(--saturation2), var(--lightness2));
     
     /* Tipografía */
     --tipo-principal   : Montserrat, sans-serif;
@@ -103,7 +106,7 @@
   
   /* Configuramos el texto que seleccionamos */
   ::selection {
-    background-color: var(--main-color);
+    background-color: var(--selection-color);
     color: @white;
   }
   
