@@ -1,12 +1,14 @@
 'use strict'
 
-console.log("\u2705 Javascript cargado")
+/*==================== ANIMATE ON SCROLL ====================*/
 
 AOS.init({
     anchorPlacement: 'top-bottom',
     duration: '500',
     once: true,
 });
+
+/*==================== VARIABLES ====================*/
 
 const scrollToTop = document.querySelector(".scroll-top");
 const header = document.querySelector(".header");
@@ -22,6 +24,8 @@ const body = document.querySelector("body");
 const esBtn = document.querySelector("#es");
 const enBtn = document.querySelector("#en");
 const euBtn = document.querySelector("#eu");
+
+/*==================== CHANGE LANGUAGE ====================*/
 
 if(esBtn) {
     esBtn.addEventListener("click", changeLangEs);
@@ -43,11 +47,15 @@ function changeLangEu() {
     location.href="/eu/";
 }
 
+/*==================== BLOCK ELEMENTS IN MAIN ANIMATION ====================*/
+
 setTimeout(function() {
     body.style.overflowY = "hidden";
     body.style.userSelect = "none";
     body.style.pointerEvents = "none";
 }, 0);
+
+/*==================== UNBLOCK ELEMENTS IN MAIN ANIMATION ====================*/
 
 setTimeout(function() {
     header.classList.remove('animation');
@@ -79,6 +87,7 @@ function scrollFunction() {
 }
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+
 function menuActiveFunction () {
     var current = "";
 
@@ -122,6 +131,8 @@ function menuActiveFunction () {
     });
 }
 
+/*==================== MENU OPTIONS ====================*/
+
 openMenu.addEventListener("click", openMenuFunction);
 closeMenu.addEventListener("click", closeMenuFunction);
 
@@ -137,6 +148,8 @@ function closeMenuFunction () {
     header.classList.remove("mobile");  
 }
 
+/*==================== ABOUT ME CARD ANIMATION ====================*/
+
 if(flipBtn) {
     flipBtn.addEventListener("click",  () => {
         document.querySelector(".about__card").classList.add("about__card--active");    
@@ -149,6 +162,8 @@ if(flipBtn2) {
     })
 }
 
+/*==================== BLOCK SCROLL IN HEADER OPTIONS ====================*/
+
 document.querySelector(".header__options").addEventListener("mouseover", mouseOver);
 document.querySelector(".header__options").addEventListener("mouseout", mouseOut);
 
@@ -160,18 +175,16 @@ function mouseOut() {
     body.style.overflowY = "auto";
 }
 
-//Get all the hyperlink elements
+/*==================== DELETE ROUTE /#IDS ====================*/
+
 var links = document.getElementsByTagName("a");
 
-//Browse the previously created array
 Array.prototype.forEach.call(links, function(elem, index) {
-  //Get the hyperlink target and if it refers to an id go inside condition
+
   var elemAttr = elem.getAttribute("href");
   if(elemAttr && elemAttr.includes("#")) {
-    //Replace the regular action with a scrolling to target on click
     elem.addEventListener("click", function(ev) {
       ev.preventDefault();
-      //Scroll to the target element using replace() and regex to find the href's target id
       document.getElementById(elemAttr.replace(/#/g, "")).scrollIntoView({
           behavior: "smooth",
           block: "start",
@@ -181,14 +194,14 @@ Array.prototype.forEach.call(links, function(elem, index) {
   }
 });
 
-// THEME COLOR
+/*==================== WEBSITE PRIMARY COLOR CHANGE ====================*/
+
 const themeColor = () => {
     const hueSlider = document.querySelector(".header__options__input");
     const html = document.querySelector("html");
   
     const setHue = (value) => {
       html.style.setProperty("--hue", value);
-    //   document.querySelector(".js-hue").innerHTML = value;
     };
   
     hueSlider.addEventListener("input", function () {
@@ -212,26 +225,22 @@ const themeColor = () => {
   };
 themeColor();
 
+/*==================== LOGO SVG ANIMATION ====================*/
+
 var path = document.querySelector('path');
 var length = path.getTotalLength();
 
-// Clear any previous transition
 path.style.transition = path.style.WebkitTransition = 'none';
 
-// Set up the starting positions
 path.style.strokeDasharray = length + ' ' + length;
 path.style.strokeDashoffset = length;
 
-// Trigger a layout so styles are calculated & the browser
-// picks up the starting position before animating
 path.getBoundingClientRect();
-// Define our transition
 path.style.transition = path.style.WebkitTransition =
   'stroke-dashoffset 0.5s ease-in 1.2s';
-// Go!
 path.style.strokeDashoffset = 0;
 
-// Glow effect
+/*==================== CURSOR ANIMATION ====================*/
 
 const blob = document.getElementById("blob");
 
