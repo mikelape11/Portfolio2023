@@ -1,0 +1,159 @@
+.theme-default {
+    .theme-color(var(--main-color));
+}
+
+.theme-color(@color) {
+    .about__span {
+        color: @color;
+    }
+
+    .about__icon:hover::before {
+        color: @color;
+    }
+
+    .about__button:hover {
+        background: linear-gradient(90deg, @greyLighter 0%, @color 100%), @greyDarker;
+    }
+
+    .about__box::before {
+        background: linear-gradient(315deg, @greyLighter, @greyDarkest, @color);
+    }
+
+    .about__box::before {
+        background: linear-gradient(315deg, @greyLighter, @greyDarkest, @color);
+    }
+
+    .about__item {
+        border-bottom: 1px solid @color;
+    }
+
+    .contact__span {
+        color: @color;
+    }
+
+    .contact__button:hover {
+        background: linear-gradient(90deg, @greyLighter 0%, @color 100%), @greyDarker;
+    }
+
+    .contact__item {
+        border-bottom: 1px solid @color;
+    }
+
+    .contact__item:hover {
+        border: 1px solid @color;
+    }
+
+    .header__li.active .header__a {
+        color: @color;
+    }
+
+    .header__li.active .header__a:before {
+        background-color: @color;
+    }
+
+    .header__a:hover {
+        color: @color;
+    }
+
+    .icon--settings:hover::before,
+    .icon--twitter:hover::before,
+    .icon--github:hover::before,
+    .icon--linkedin:hover::before,
+    .icon--arrowdown:hover::before,
+    .icon--menu:hover::before,
+    .icon--arrowup:hover::before,
+    .icon--behance:hover::before,
+    .icon--dribbble:hover::before,
+    .icon--plus:hover::before {
+        color: @color;
+    }
+
+    .header__options__language.active span {
+        color: @color;
+    }
+
+    .header__progress-bar {
+        background: @color;
+    }
+
+    .header__options:hover {
+
+        .header__options__icon {
+            border: 1px solid @color;
+        }
+
+        .icon--settings::before {
+            color: @color;
+        }
+    }
+
+    .header__options__language span:hover {
+        color: @color;
+    }
+
+    .header__logo svg path{
+        stroke: @color !important;
+    }
+
+    .header__span {
+        color: @color;
+    }
+
+    .home__span {
+        color: @color;
+    }
+
+    .home__button:hover {
+        border: 1px solid @color;
+    }
+
+    .portfolio__span {
+        color: @color;
+    }
+
+    .portfolio__card:hover {
+        border: 2px solid @color;
+    }
+
+    .sidebar__indicator::before {
+        background: @color;
+    }
+
+    .sidebar__indicator:hover {
+        color: @color;
+    }
+
+    .sidebar__indicator.active {
+        color: @color;
+    }
+
+    .sidebar__indicator.active::before {
+        background: linear-gradient(90deg, @color 0%, @greyLighter 99.29%);
+    }
+
+    .sidebar__button:hover {
+        border: 1px solid @color;
+    }
+
+    .trajectory__span {
+        color: @color;
+    }
+
+    .timeline__item__date {
+        color: @color;
+    }
+
+    .timeline__li:hover::before {
+        background-color: @color;
+    }
+
+    .bg-circle, .bg-circle2 {
+        background: linear-gradient(to right, @color, @white);
+    }
+
+    #blob {
+        background: linear-gradient(to right, @color, @white);
+    }
+
+}
+

@@ -4,6 +4,8 @@
     --primary-color: #0790cf;
     --blue: #0892D0;
     --green: #08D040;
+    --white: #ffffff;
+    --black: #000000;
 
     --hue: 200;
     --saturation: 80%;
@@ -24,7 +26,7 @@
   /* Las adaptamos al modo oscuro */
 //   @media (prefers-color-scheme: dark) {
 //     :root{
-//         --negro         : #ececec;
+//         --white         : #fff;
 //     }
 //   }
   
@@ -107,7 +109,7 @@
   /* Configuramos el texto que seleccionamos */
   ::selection {
     background-color: var(--selection-color);
-    color: @white;
+    color: var(--white);
   }
   
   /* Nivelamos problemas de tipografías y colocación de formularios */
@@ -143,7 +145,7 @@
     min-height  : 100dvh;
     font-size   : 100%;
     font-family : var(--tipo-principal);
-    color       : var(--negro);
+    color       : var(--white);
     background  : @greyDarker;
     // /* opcional */ line-height: 1.4em;
     /* opcional */ hyphens: auto;
